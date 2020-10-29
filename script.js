@@ -2,7 +2,6 @@
 var numeriVietati = [];
 console.log(numeriVietati);
 var numeriDellUtente = [];
-console.log(numeriDellUtente);
 
 // CREO LA FUNZIONE NECESSARIA A GENERARE 16 NUMERI COMPRESI TRA 1 E 100
 function randomNumeriVietati(min, max) {
@@ -25,7 +24,6 @@ while (numeriDellUtente.length < 5) {
   var inputUtente = input;
 
   if (numeriVietati.includes(inputUtente)) { // se input utnte è incluso in arrey vietati, allora
-    alert("Hai perso.");
     break;
   } else if (numeriDellUtente.includes(inputUtente)) { // se input utente è incluso nell'arrey suoi numeri, allora
       alert("Il numero è già stato inserito.");
@@ -34,4 +32,19 @@ while (numeriDellUtente.length < 5) {
   } else {
     numeriDellUtente.push(inputUtente);
   }
+}
+
+console.log(numeriDellUtente);
+
+// TERZO STEP: mando in output il risultato dell'utente
+var messageEl = document.getElementById("message");
+var roundsEl = document.getElementById("rounds");
+
+// condizioni output
+if (numeriDellUtente.length >= 5) {
+  messageEl.innerHTML = "Hai Vinto!"
+  roundsEl.innerHTML = "Hai inserito " + numeriDellUtente.length + " numeri";
+} else {
+  messageEl.innerHTML = "Hai Perso!"
+  roundsEl.innerHTML = "Hai inserito " + numeriDellUtente.length + " numeri";
 }
