@@ -3,10 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="master.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
   </head>
   <body>
-  <h1 id="message"></h1>
-  <h2 id="rounds"></h2>
+    <div class="container text-center">
+      <!-- titolo -->
+      <div class="row">
+        <h1 class="first_title">CAMPO MINATO!</h1>
+      </div>
+
+      <!-- selezione difficoltà -->
+      <div class="row">
+        <select id="difficulties" class="text-center">
+          <option value="0">Semplice</option>
+          <option value="1">Medio</option>
+          <option value="2">Difficile</option>
+        </select>
+      </div>
+
+      <!-- start btn -->
+      <input id="start" class="btn btn-default" type="button" value="start">
+
+    </div>
+
+    <div>
+      <h1 id="message"></h1>
+      <h2 id="rounds"></h2>
+    </div>
+
 
   <!-- script -->
   <script src="script.js" charset="utf-8"></script>
